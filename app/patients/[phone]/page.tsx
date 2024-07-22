@@ -57,7 +57,7 @@ type Props = {
 const Register = ({ params }: Props) => {
   const phone = params.phone;
   const decodedPhoneNo = decodeURIComponent(phone);
-
+  console.log("PHONE NO: ", decodedPhoneNo);
   const supabase = createClient();
   const router = useRouter();
   const [loading, setLoading] = useState(false);
@@ -66,8 +66,6 @@ const Register = ({ params }: Props) => {
 
   const [username, setUsername] = useState("");
   const [phoneNo, setPhoneNo] = useState("");
-
-  
 
   // 1. Define your form.
   const form = useForm<z.infer<typeof formSchema>>({
@@ -83,7 +81,7 @@ const Register = ({ params }: Props) => {
     // ✅ This will be type-safe and validated.
     try {
       setLoading(true);
-
+      console.log(values);
       const { data, error } = await supabase
         .from("patients")
         .update(values)

@@ -80,30 +80,16 @@ const ConfirmAppointment = ({
       if (!error) {
         toast("Appointment confirmed successfully!");
         setOpen(false);
-        await fetch('/api/emails', {
-          method: 'POST',
+        await fetch("/api/emails", {
+          method: "POST",
           body: JSON.stringify({
             email: data[0].email,
             date: data[0].appointmentDate,
             doctor: data[0].doctor,
             patient: data[0].username,
-          })
-        })
-
-        //  <Button
-        //    onClick={async () => {
-        //      await fetch("/api/emails", {
-        //        method: "POST",
-        //        body: JSON.stringify({
-        //          email: "codemat.biz@gmail.com",
-        //          username: "Matthew NFVCB",
-        //        }),
-        //      });
-        //    }}>
-        //    Test Emails
-        //  </Button>;
-
-
+          }),
+        });
+        toast("Confirmation email sent successfully!");
         revalidatePath("/admin");
       }
     } catch (error) {
@@ -134,15 +120,16 @@ const ConfirmAppointment = ({
       if (!error) {
         toast("Appointment adjusted and confirmed successfully!");
         setOpen(false);
-         await fetch("/api/emails", {
-           method: "POST",
-           body: JSON.stringify({
-             email: data[0].email,
-             date: data[0].appointmentDate,
-             doctor: data[0].doctor,
-             patient: data[0].username,
-           }),
-         });
+        await fetch("/api/emails", {
+          method: "POST",
+          body: JSON.stringify({
+            email: data[0].email,
+            date: data[0].appointmentDate,
+            doctor: data[0].doctor,
+            patient: data[0].username,
+          }),
+        });
+        toast("Confirmation email sent successfully!");
         revalidatePath("/admin");
       }
     } catch (error) {

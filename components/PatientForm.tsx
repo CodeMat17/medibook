@@ -92,32 +92,6 @@ export function PatientForm() {
         toast("profile registration initiated!!");
         router.push(`/patients/${values.phone}`);
       }
-
-      // const { data, error } = await supabase
-      //   .from("patients")
-      //   .upsert({ ...values }, { onConflict: values.phone });
-
-      // .eq("phone", values.phone);
-
-      // if (error) {
-      //   if (error.code === "23505") {
-      //     setErrorMessage(error.details);
-      //   } else {
-      //     setErrorMessage(
-      //       `Something went wrong. Try again later: ${error.message}`
-      //     );
-      //   }
-      //   return;
-      // }
-
-      // if (data) {
-      //   // const patient = data[0];
-      //   toast("Successful!");
-      //   router.push(`/patients/${values.phone}`);
-      // }
-
-      // toast(`Welcome ${values.username}`);
-      // router.push(`/patients/${values.phone}`);
     } catch (error) {
       alert(`Error creating profile: ${error}`);
     } finally {
