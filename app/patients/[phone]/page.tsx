@@ -56,8 +56,9 @@ type Props = {
 
 const Register = ({ params }: Props) => {
   const phone = params.phone;
-  const decodedPhoneNo = decodeURIComponent(phone);
-  console.log("PHONE NO: ", decodedPhoneNo);
+  const decodedPhoneNo = decodeURIComponent(phone).replace(/\s/g, "+");
+
+  console.log("decodedPhoneNo: ", decodedPhoneNo);
   const supabase = createClient();
   const router = useRouter();
   const [loading, setLoading] = useState(false);

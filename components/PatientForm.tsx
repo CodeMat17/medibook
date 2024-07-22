@@ -173,7 +173,9 @@ export function PatientForm() {
                   className='phone-input'
                 />
               </FormControl>
-              <FormDescription className="text-xs">You MUST enter a valid phone no. to be captured.</FormDescription>
+              <FormDescription className='text-xs'>
+                You MUST enter a valid phone no. to be captured.
+              </FormDescription>
               <FormMessage />
             </FormItem>
           )}
