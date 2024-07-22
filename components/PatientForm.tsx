@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
+  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -198,6 +199,7 @@ export function PatientForm() {
                   className='phone-input'
                 />
               </FormControl>
+              <FormDescription className="text-xs">You MUST enter a valid phone no. to be captured.</FormDescription>
               <FormMessage />
             </FormItem>
           )}
