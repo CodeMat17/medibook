@@ -254,7 +254,7 @@ const Appointment = ({ params }: Props) => {
                               !field.value && "text-muted-foreground"
                             )}>
                             {field.value ? (
-                              dayjs(field.value).format("MMM DD, YYYY HH:mm:ss")
+                              dayjs(field.value).format("MMM DD, YYYY | hh:mm A")
                             ) : (
                               <span className='text-left'>Pick a date</span>
                             )}

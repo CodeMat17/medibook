@@ -70,7 +70,7 @@ const Success = ({ params }: Props) => {
             </div>{" "}
             <div className='flex items-center'>
               <Calendar className='w-4 h-4 mr-2' />
-              {dayjs(appointmentDate).format("MMM DD, YYYY HH:mm:ss")}
+              {dayjs(appointmentDate).format("MMM DD, YYYY | hh:mm A")}
             </div>
           </div>
         )}
