@@ -11,7 +11,7 @@ type Props = {
 
 const Success = ({ params }: Props) => {
   const phone = params.phone;
-  const decodedPhoneNo = decodeURIComponent(phone);
+  const decodedPhoneNo = decodeURIComponent(phone).replace(/\s/g, "+");
 
   const [loading, setLoading] = useState(true);
   const [doctor, setDoctor] = useState("");

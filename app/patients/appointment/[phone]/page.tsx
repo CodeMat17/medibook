@@ -74,7 +74,7 @@ type Props = {
 
 const Appointment = ({ params }: Props) => {
   const phone = params.phone;
-  const decodedPhoneNo = decodeURIComponent(phone);
+  const decodedPhoneNo = decodeURIComponent(phone).replace(/\s/g, "+");
 
   const supabase = createClient();
   const router = useRouter();
