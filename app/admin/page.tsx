@@ -74,7 +74,7 @@ const AdminPage = async () => {
             appointments?.map((item) => (
               <div
                 key={item.id}
-                className='relative bg-gray-900/60 p-5 rounded-xl w-full mx-auto'>
+                className='relative bg-gray-900 p-5 rounded-xl w-full mx-auto'>
                 <h2 className='text-xl font-medium mb-2 mt-4'>
                   {item.username}
                 </h2>

@@ -42,7 +42,7 @@ export function Hero() {
             </div>
           </div>
         </div>
-        {/* <BackgroundBeams /> */}
+        <BackgroundBeams />
       </div>
     </div>
   );

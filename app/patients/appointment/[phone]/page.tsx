@@ -152,7 +152,7 @@ const Appointment = ({ params }: Props) => {
               name='doctor'
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className='text-sky-500/60'>
+                  <FormLabel className='text-sky-500/80'>
                     Select Doctor
                   </FormLabel>
                   <div className='flex items-center'>
@@ -161,7 +161,7 @@ const Appointment = ({ params }: Props) => {
                       onValueChange={field.onChange}
                       defaultValue={field.value}>
                       <FormControl>
-                        <SelectTrigger>
+                        <SelectTrigger className='bg-gray-900'>
                           <SelectValue placeholder='Select your favourite doctor.' />
                         </SelectTrigger>
                       </FormControl>
@@ -195,13 +195,13 @@ const Appointment = ({ params }: Props) => {
                 name='reason'
                 render={({ field }) => (
                   <FormItem className='w-full'>
-                    <FormLabel className='text-sky-500/60'>Reason</FormLabel>
+                    <FormLabel className='text-sky-500/80'>Reason</FormLabel>
                     <FormControl>
                       <div className='flex items-center '>
                         <NotebookTabsIcon className='mr-4 text-sky-500 shrink-0' />
                         <Textarea
                           placeholder='Enter the reason for your appointment'
-                          className='resize-none'
+                          className='resize-none bg-gray-900'
                           {...field}
                         />
                       </div>
@@ -215,7 +215,7 @@ const Appointment = ({ params }: Props) => {
                 name='comment'
                 render={({ field }) => (
                   <FormItem className='w-full'>
-                    <FormLabel className='text-sky-500/60'>
+                    <FormLabel className='text-sky-500/80'>
                       Additional Comments
                     </FormLabel>
                     <FormControl>
@@ -223,7 +223,7 @@ const Appointment = ({ params }: Props) => {
                         <MessageCirclePlusIcon className='mr-4 text-sky-500 shrink-0' />
                         <Textarea
                           placeholder='Enter additional comments'
-                          className='resize-none'
+                          className='resize-none bg-gray-900'
                           {...field}
                         />
                       </div>
@@ -239,7 +239,7 @@ const Appointment = ({ params }: Props) => {
               name='appointmentDate'
               render={({ field }) => (
                 <FormItem className='flex flex-col'>
-                  <FormLabel className='text-sky-500/60'>
+                  <FormLabel className='text-sky-500/80'>
                     Appointment Date
                   </FormLabel>
                   <div className='flex items-center pt-1'>
@@ -250,11 +250,13 @@ const Appointment = ({ params }: Props) => {
                           <Button
                             variant={"outline"}
                             className={cn(
-                              "w-full text-left font-normal",
+                              "w-full text-left font-normal bg-gray-900",
                               !field.value && "text-muted-foreground"
                             )}>
                             {field.value ? (
-                              dayjs(field.value).format("MMM DD, YYYY | hh:mm A")
+                              dayjs(field.value).format(
+                                "MMM DD, YYYY | hh:mm A"
+                              )
                             ) : (
                               <span className='text-left'>Pick a date</span>
                             )}

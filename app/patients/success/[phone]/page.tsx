@@ -41,7 +41,7 @@ const Success = ({ params }: Props) => {
   };
 
   return (
-    <div className='flex flex-col p-8 items-center justify-center w-full h-[30rem]'>
+    <div className='flex flex-col p-8 items-center justify-center w-full h-[40rem]'>
       <div className='w-32 aspect-square rounded-full overflow-hidden'>
         <video loop autoPlay muted playsInline>
           <source src='/success_loader.mp4' type='video/mp4' />
@@ -64,11 +64,11 @@ const Success = ({ params }: Props) => {
           </div>
         ) : (
           <div className='flex flex-col sm:flex-row w-full gap-1 sm:gap-4 text-sky-600'>
-            <p className="sm:text-center pb-1 sm:pb-0 uppercase ">Request details:</p>{" "}
-            <div className='flex items-center'>
+            <p className="text-center pb-1 sm:pb-0 uppercase ">Request details:</p>{" "}
+            <div className='flex items-center justify-center'>
               <UserCircle2 className='w-4 h-4 mr-2' /> {doctor}
             </div>{" "}
-            <div className='flex items-center'>
+            <div className='flex items-center justify-center'>
               <Calendar className='w-4 h-4 mr-2' />
               {dayjs(appointmentDate).format("MMM DD, YYYY | hh:mm A")}
             </div>

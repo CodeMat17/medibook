@@ -128,13 +128,13 @@ const Register = ({ params }: Props) => {
               name='address'
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className='text-sky-500/60'>Address</FormLabel>
+                  <FormLabel className='text-sky-500/80'>Address</FormLabel>
                   <FormControl>
                     <div className='flex items-center'>
                       <NotebookTabsIcon className='mr-4 text-sky-500' />
                       <Textarea
                         placeholder='Enter your address'
-                        className='resize-none'
+                        className='resize-none bg-gray-900'
                         {...field}
                       />
                     </div>
@@ -149,11 +149,11 @@ const Register = ({ params }: Props) => {
               name='gender'
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className='text-sky-500/60'>Gender</FormLabel>
+                  <FormLabel className='text-sky-500/80'>Gender</FormLabel>
                   <FormControl>
                     <div className='flex items-center w-full'>
                       <ContactIcon className='mr-4 text-sky-500' />
-                      <div className='w-full border border-gray-800 rounded-md p-4'>
+                      <div className='w-full border bg-gray-900 rounded-md p-4'>
                         <RadioGroup
                           onValueChange={field.onChange}
                           defaultValue={field.value}
@@ -192,7 +192,7 @@ const Register = ({ params }: Props) => {
               name='dob'
               render={({ field }) => (
                 <FormItem className='flex flex-col'>
-                  <FormLabel className='text-sky-500/60'>
+                  <FormLabel className='text-sky-500/80'>
                     Date of birth
                   </FormLabel>
                   <div className='flex items-center pt-1'>
@@ -203,7 +203,7 @@ const Register = ({ params }: Props) => {
                           <Button
                             variant={"outline"}
                             className={cn(
-                              "w-full text-left font-normal",
+                              "w-full text-left font-normal bg-gray-900",
                               !field.value && "text-muted-foreground"
                             )}>
                             {field.value ? (

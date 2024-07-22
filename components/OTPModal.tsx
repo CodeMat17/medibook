@@ -64,27 +64,27 @@ const OTPModal = () => {
               onChange={(value) => setPasskey(value)}>
               <InputOTPGroup className='flex gap-2'>
                 <InputOTPSlot
-                  className='border rounded-md sm:p-6 text-lg'
+                  className='border rounded-md sm:p-6 text-lg bg-gray-900'
                   index={0}
                 />
                 <InputOTPSlot
-                  className='border rounded-md sm:p-6 text-lg'
+                  className='border rounded-md sm:p-6 text-lg bg-gray-900'
                   index={1}
                 />
                 <InputOTPSlot
-                  className='border rounded-md sm:p-6 text-lg'
+                  className='border rounded-md sm:p-6 text-lg bg-gray-900'
                   index={2}
                 />
                 <InputOTPSlot
-                  className='border rounded-md sm:p-6 text-lg'
+                  className='border rounded-md sm:p-6 text-lg bg-gray-900'
                   index={3}
                 />
                 <InputOTPSlot
-                  className='border rounded-md sm:p-6 text-lg'
+                  className='border rounded-md sm:p-6 text-lg bg-gray-900'
                   index={4}
                 />
                 <InputOTPSlot
-                  className='border rounded-md sm:p-6 text-lg'
+                  className='border rounded-md sm:p-6 text-lg bg-gray-900'
                   index={5}
                 />
               </InputOTPGroup>
@@ -100,7 +100,9 @@ const OTPModal = () => {
               Enter Admin Passcode
             </AlertDialogAction>
           </AlertDialogFooter>
-          <p className='text-xs text-center text-gray-400'>Demo passcode: 654321</p>
+          <p className='text-xs text-center text-gray-400'>
+            Demo passcode: 654321
+          </p>
         </AlertDialogContent>
       </AlertDialog>
     </div>

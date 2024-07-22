@@ -121,11 +121,15 @@ export function PatientForm() {
           name='username'
           render={({ field }) => (
             <FormItem>
-              <FormLabel className='text-sky-500/60'>Username</FormLabel>
+              <FormLabel className='text-sky-500/80'>Username</FormLabel>
               <FormControl>
                 <div className='flex items-center'>
                   <User2Icon className='mr-4 text-sky-500' />
-                  <Input placeholder='Eg. John Doe' {...field} />
+                  <Input
+                    placeholder='Eg. John Doe'
+                    {...field}
+                    className='bg-gray-900'
+                  />
                 </div>
               </FormControl>
               <FormMessage />
@@ -138,7 +142,7 @@ export function PatientForm() {
           name='email'
           render={({ field }) => (
             <FormItem>
-              <FormLabel className='text-sky-500/60'>Email</FormLabel>
+              <FormLabel className='text-sky-500/80'>Email</FormLabel>
               <FormControl>
                 <div className='flex items-center'>
                   <MailPlusIcon className='mr-4 text-sky-500' />
@@ -146,6 +150,7 @@ export function PatientForm() {
                     type='email'
                     placeholder='Eg. johndoe@gmail.com'
                     {...field}
+                    className='bg-gray-900'
                   />
                 </div>
               </FormControl>
@@ -159,7 +164,7 @@ export function PatientForm() {
           name='phone'
           render={({ field }) => (
             <FormItem>
-              <FormLabel className='text-sky-500/60'>
+              <FormLabel className='text-sky-500/80'>
                 Enter your phone number
               </FormLabel>
               <FormControl>
@@ -170,7 +175,7 @@ export function PatientForm() {
                   withCountryCallingCode
                   value={field.value as E164Number | undefined}
                   onChange={field.onChange}
-                  className='phone-input'
+                  className='phone-input bg-gray-900'
                 />
               </FormControl>
               <FormDescription className='text-xs'>
