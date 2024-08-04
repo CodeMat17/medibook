@@ -1,18 +1,9 @@
 "use client";
-import { BackgroundBeams } from "@/components/ui/background-beams";
+// import { BackgroundBeams } from "@/components/ui/background-beams";
 import Image from "next/image";
 import Link from "next/link";
 import OTPModal from "./OTPModal";
 import { PatientForm } from "./PatientForm";
-import { Button } from "./ui/button";
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-} from "@/components/ui/dialog";
-import { useState } from "react";
 
 
 
@@ -42,7 +33,7 @@ export function Hero() {
             </div>
           </div>
         </div>
-        <BackgroundBeams />
+        {/* <BackgroundBeams /> */}
       </div>
     </div>
   );
